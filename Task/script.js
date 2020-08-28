@@ -1399,7 +1399,7 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": 0,
                                             "angle": 0,
-                                            "width": 51.28,
+                                            "width": 51.29,
                                             "height": 101.7,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -1429,8 +1429,8 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -1717,8 +1717,8 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -2031,11 +2031,11 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": "-2",
-                                            "top": "8",
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
-                                            "width": 25,
-                                            "height": 56.5,
+                                            "width": 37.26,
+                                            "height": 75.71,
                                             "stroke": null,
                                             "strokeWidth": 1,
                                             "fill": "black",
@@ -2370,11 +2370,11 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": "-2",
-                                            "top": "8",
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
-                                            "width": 25,
-                                            "height": 56.5,
+                                            "width": 37.26,
+                                            "height": 75.71,
                                             "stroke": null,
                                             "strokeWidth": 1,
                                             "fill": "black",
@@ -2743,8 +2743,8 @@ if(this.state.youpractice==5){
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -3867,7 +3867,7 @@ console.log(this.options.parameters.trial_count)
                                   {
                                     "type": "i-text",
                                     "left": 0,
-                                    "top": 0,
+                                    "top": 7,
                                     "angle": 0,
                                     "width": 700.19,
                                     "height": 75.71,
@@ -4784,11 +4784,11 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": "-2",
-                                            "top": "8",
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
-                                            "width": 25,
-                                            "height": 56.5,
+                                            "width": 37.26,
+                                            "height": 75.71,
                                             "stroke": null,
                                             "strokeWidth": 1,
                                             "fill": "black",
@@ -5097,11 +5097,11 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": "-2",
-                                            "top": "8",
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
-                                            "width": 25,
-                                            "height": 56.5,
+                                            "width": 37.26,
+                                            "height": 75.71,
                                             "stroke": null,
                                             "strokeWidth": 1,
                                             "fill": "black",
@@ -5424,8 +5424,8 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -5777,8 +5777,8 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -6164,8 +6164,8 @@ if(this.state.otherpractice==5){
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -7304,7 +7304,7 @@ console.log(this.options.parameters.trial_count)
                                   {
                                     "type": "i-text",
                                     "left": 0,
-                                    "top": 0,
+                                    "top": 7,
                                     "angle": 0,
                                     "width": 700.19,
                                     "height": 75.71,
@@ -8700,7 +8700,7 @@ console.log(this.options.parameters.trial_count)
                           {
                             "type": "i-text",
                             "left": 0,
-                            "top": 0,
+                            "top": 7,
                             "angle": 0,
                             "width": 700.19,
                             "height": 75.71,
@@ -9946,7 +9946,7 @@ console.log(this.options.parameters.trial_count)
                           {
                             "type": "i-text",
                             "left": 0,
-                            "top": 0,
+                            "top": 7,
                             "angle": 0,
                             "width": 700.19,
                             "height": 75.71,
@@ -11323,11 +11323,11 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": "-2",
-                                            "top": "8",
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
-                                            "width": 25,
-                                            "height": 56.5,
+                                            "width": 37.26,
+                                            "height": 75.71,
                                             "stroke": null,
                                             "strokeWidth": 1,
                                             "fill": "black",
@@ -11636,11 +11636,11 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": "-2",
-                                            "top": "8",
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
-                                            "width": 25,
-                                            "height": 56.5,
+                                            "width": 37.26,
+                                            "height": 75.71,
                                             "stroke": null,
                                             "strokeWidth": 1,
                                             "fill": "black",
@@ -11963,8 +11963,8 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -12316,8 +12316,8 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -12703,8 +12703,8 @@ if(this.state.otherpractice==5){
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -13841,7 +13841,7 @@ console.log(this.options.parameters.trial_count)
                                   {
                                     "type": "i-text",
                                     "left": 0,
-                                    "top": 0,
+                                    "top": 7,
                                     "angle": 0,
                                     "width": 700.19,
                                     "height": 75.71,
@@ -14730,7 +14730,7 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": 0,
                                             "angle": 0,
-                                            "width": 51.28,
+                                            "width": 51.29,
                                             "height": 101.7,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -14760,8 +14760,8 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -15048,8 +15048,8 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -15362,11 +15362,11 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": "-2",
-                                            "top": "8",
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
-                                            "width": 25,
-                                            "height": 56.5,
+                                            "width": 37.26,
+                                            "height": 75.71,
                                             "stroke": null,
                                             "strokeWidth": 1,
                                             "fill": "black",
@@ -15701,11 +15701,11 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": "-2",
-                                            "top": "8",
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
-                                            "width": 25,
-                                            "height": 56.5,
+                                            "width": 37.26,
+                                            "height": 75.71,
                                             "stroke": null,
                                             "strokeWidth": 1,
                                             "fill": "black",
@@ -16074,8 +16074,8 @@ if(this.state.youpractice==5){
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -17198,7 +17198,7 @@ console.log(this.options.parameters.trial_count)
                                   {
                                     "type": "i-text",
                                     "left": 0,
-                                    "top": 0,
+                                    "top": "7",
                                     "angle": 0,
                                     "width": 700.19,
                                     "height": 75.71,
@@ -18596,7 +18596,7 @@ console.log(this.options.parameters.trial_count)
                           {
                             "type": "i-text",
                             "left": 0,
-                            "top": 0,
+                            "top": 7,
                             "angle": 0,
                             "width": 700.19,
                             "height": 75.71,
@@ -19845,7 +19845,7 @@ console.log(this.options.parameters.trial_count)
                           {
                             "type": "i-text",
                             "left": 0,
-                            "top": 0,
+                            "top": 7,
                             "angle": 0,
                             "width": 700.19,
                             "height": 75.71,
