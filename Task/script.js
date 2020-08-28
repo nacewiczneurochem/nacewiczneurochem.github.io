@@ -9,8 +9,7 @@ const study = lab.util.fromObject({
       "path": undefined
     },
     {
-      "type": "lab.plugins.Transmit",
-      "url": "backend.php",
+      "type": "lab.plugins.PostMessage",
       "path": undefined
     }
   ],
@@ -60,7 +59,7 @@ const study = lab.util.fromObject({
             800,
             600
           ],
-          "title": "Welcome",
+          "title": "Welcome1",
           "timeout": "180000",
           "content": [
             {
@@ -86,7 +85,7 @@ const study = lab.util.fromObject({
               "left": 0,
               "top": -500,
               "angle": 0,
-              "width": 771.26,
+              "width": 771.27,
               "height": 323.18,
               "stroke": null,
               "strokeWidth": 1,
@@ -104,7 +103,7 @@ const study = lab.util.fromObject({
               "left": 0,
               "top": 275,
               "angle": 0,
-              "width": 181.13,
+              "width": 181.14,
               "height": 18.08,
               "stroke": null,
               "strokeWidth": 1,
@@ -120,14 +119,103 @@ const study = lab.util.fromObject({
             {
               "type": "i-text",
               "left": 0,
-              "top": 0,
+              "top": 25,
               "angle": 0,
-              "width": 800.44,
+              "width": 719.8,
+              "height": 297.33,
+              "stroke": null,
+              "strokeWidth": 1,
+              "fill": "black",
+              "text": "During the following task, you will be asked a series of questions about\nthe number of dots you see in various scenarios. \n\nWe will also ask you to provide some information about yourself\n and your attitudes or beliefs. \n\nOur data will be more valuable if you provide this information, and we \nwould like to compare differences between people and groups.\n\nThis study should take about 20 minutes to complete. ",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+              "fontSize": "23",
+              "fontFamily": "sans-serif",
+              "lineHeight": 1.16,
+              "textAlign": "center"
+            }
+          ]
+        },
+        {
+          "type": "lab.canvas.Screen",
+          "files": {},
+          "parameters": {},
+          "responses": {
+            "keypress(Space)": "Space"
+          },
+          "messageHandlers": {},
+          "viewport": [
+            800,
+            600
+          ],
+          "title": "Welcome2",
+          "timeout": "180000",
+          "content": [
+            {
+              "type": "i-text",
+              "left": 0,
+              "top": -225,
+              "angle": 0,
+              "width": 221.39,
+              "height": 56.5,
+              "stroke": null,
+              "strokeWidth": 1,
+              "fill": "black",
+              "text": "Welcome!",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+              "fontSize": "50",
+              "fontFamily": "sans-serif",
+              "lineHeight": 1.16,
+              "textAlign": "center"
+            },
+            {
+              "type": "i-text",
+              "left": 0,
+              "top": -500,
+              "angle": 0,
+              "width": 771.27,
               "height": 323.18,
               "stroke": null,
               "strokeWidth": 1,
               "fill": "black",
-              "text": "During the following task, you will be asked a series of questions about\nthe number of dots you see in various scenarios. We will also ask you \nto provide some information about yourself and your attitudes or beliefs. \nOur data will be more valuable if you provide this information and we \nwould like to compare differences between people and groups.\n\nThis study should take about 20 minutes to complete. \n\nAt the end of the task, you will receive a secret key to input to mTurk \nto receive your compensation. ",
+              "text": "During the following task, you will be asked a series of questions \nabout the number of dots you see in various scenarios. We will also\nask you to provide some information about yourself and your attitudes\nor beliefs. Our data will be more valuable if you provide this data and \nwe would like to compare differences between people and groups.\n\nThis study should take about 20 minutes to complete. \nAt the end of the task, you will receive a secret key to input to mTurk\nto receive your compensation. \n",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+              "fontSize": "25",
+              "fontFamily": "sans-serif",
+              "lineHeight": 1.16,
+              "textAlign": "center"
+            },
+            {
+              "type": "i-text",
+              "left": 0,
+              "top": 275,
+              "angle": 0,
+              "width": 181.14,
+              "height": 18.08,
+              "stroke": null,
+              "strokeWidth": 1,
+              "fill": "black",
+              "text": "Press SPACE to continue",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+              "fontSize": "16",
+              "fontFamily": "sans-serif",
+              "lineHeight": 1.16,
+              "textAlign": "center"
+            },
+            {
+              "type": "i-text",
+              "left": 0,
+              "top": 15,
+              "angle": 0,
+              "width": 700.99,
+              "height": 297.33,
+              "stroke": null,
+              "strokeWidth": 1,
+              "fill": "black",
+              "text": "This task includes an audio component.\n\nWe recommend headphones, but any sound will do.\nThe next screen will test your sound to ensure it is loud enough.\n\nPlease keep your sound for the whole task so we can\ncompare your responses to others. \n\nAt the end of the task, you will receive a secret key to input to mTurk \nto receive your compensation. ",
               "fontStyle": "normal",
               "fontWeight": "normal",
               "fontSize": "23",
@@ -272,19 +360,8 @@ this.parameters.myInstruction = randomInstruction;
               "files": {},
               "responses": {},
               "parameters": {},
-              "messageHandlers": {
-                "before:prepare": function anonymous(
-) {
-thisTrial=0;
-thisBlock=0;
-thisCumeTrial=0;
-this.state.thisTrial=0 ;
-this.state.thisCumeTrial=thisCumeTrial=0 ;
-this.state.thisBlock=thisBlock=0;
-
-}
-              },
               "title": "You_Instructions_First",
+              "messageHandlers": {},
               "skip": "${this.parameters.myInstruction == 'other'}",
               "content": [
                 {
@@ -338,12 +415,12 @@ this.state.thisBlock=thisBlock=0;
                               "left": 0,
                               "top": -200,
                               "angle": 0,
-                              "width": 744.82,
+                              "width": 678.1,
                               "height": 93.79,
                               "stroke": null,
                               "strokeWidth": 1,
                               "fill": "black",
-                              "text": "In this experiment, you will be shown a room with circles pinned on \nthe walls. There will be a man, woman, or arrow in the room.\n",
+                              "text": "In this experiment, you will see a room with circles pinned on \nthe walls. There will be a man, woman, or arrow in the room.\n",
                               "fontStyle": "normal",
                               "fontWeight": "normal",
                               "fontSize": "25",
@@ -416,7 +493,7 @@ this.state.thisBlock=thisBlock=0;
                               "left": 0,
                               "top": 275,
                               "angle": 0,
-                              "width": 158.5,
+                              "width": 158.49,
                               "height": 15.82,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -462,10 +539,10 @@ this.state.thisBlock=thisBlock=0;
                           "content": [
                             {
                               "type": "i-text",
-                              "left": -75,
+                              "left": -60,
                               "top": -64,
                               "angle": 0,
-                              "width": 273.02,
+                              "width": 273.03,
                               "height": 28.25,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -542,7 +619,7 @@ this.state.thisBlock=thisBlock=0;
                               "left": -200,
                               "top": 200,
                               "angle": 0,
-                              "width": 356.63,
+                              "width": 356.65,
                               "height": 116.44,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -607,7 +684,7 @@ this.state.thisBlock=thisBlock=0;
                               "left": 0,
                               "top": -200,
                               "angle": 0,
-                              "width": 787.95,
+                              "width": 787.96,
                               "height": 93.79,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -716,13 +793,14 @@ this.state.thisBlock=thisBlock=0;
                             600
                           ],
                           "timeout": "180000",
+                          "title": "you_example",
                           "content": [
                             {
                               "type": "i-text",
                               "left": 0,
                               "top": -175,
                               "angle": 0,
-                              "width": 446.51,
+                              "width": 446.5,
                               "height": 28.25,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -740,12 +818,12 @@ this.state.thisBlock=thisBlock=0;
                               "left": 0,
                               "top": 200,
                               "angle": 0,
-                              "width": 461.5,
+                              "width": 331.41,
                               "height": 82.54,
                               "stroke": null,
                               "strokeWidth": 1,
                               "fill": "black",
-                              "text": "You should ignore what the arrow is pointing at.\n\nTotal Dots = 3 = h = CORRECT",
+                              "text": "Please ignore the arrow or person\n\nTotal Dots = 3 = h = CORRECT",
                               "fontStyle": "normal",
                               "fontWeight": "normal",
                               "fontSize": "22",
@@ -788,7 +866,7 @@ this.state.thisBlock=thisBlock=0;
                               "left": 0,
                               "top": 275,
                               "angle": 0,
-                              "width": 158.5,
+                              "width": 158.49,
                               "height": 15.82,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -806,21 +884,20 @@ this.state.thisBlock=thisBlock=0;
                               "left": 0,
                               "top": -250,
                               "angle": 0,
-                              "width": 213.44,
+                              "width": 227.51,
                               "height": 36.16,
                               "stroke": null,
                               "strokeWidth": 1,
                               "fill": "black",
                               "text": "YOU Condition",
                               "fontStyle": "normal",
-                              "fontWeight": "normal",
+                              "fontWeight": "bold",
                               "fontSize": 32,
                               "fontFamily": "sans-serif",
                               "lineHeight": 1.16,
                               "textAlign": "center"
                             }
-                          ],
-                          "title": "you_example"
+                          ]
                         },
                         {
                           "type": "lab.canvas.Screen",
@@ -946,7 +1023,7 @@ this.state.thisBlock=thisBlock=0;
                               "left": 350,
                               "top": -113,
                               "angle": 0,
-                              "width": 16.69,
+                              "width": 16.68,
                               "height": 33.9,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -964,7 +1041,7 @@ this.state.thisBlock=thisBlock=0;
                               "left": 0,
                               "top": 275,
                               "angle": 0,
-                              "width": 158.5,
+                              "width": 158.49,
                               "height": 15.82,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -982,7 +1059,7 @@ this.state.thisBlock=thisBlock=0;
                               "left": 0,
                               "top": -250,
                               "angle": 0,
-                              "width": 530.84,
+                              "width": 530.83,
                               "height": 28.25,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -1022,7 +1099,7 @@ this.state.thisBlock=thisBlock=0;
                               "left": -50,
                               "top": -125,
                               "angle": 0,
-                              "width": 16.69,
+                              "width": 16.68,
                               "height": 33.9,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -1116,12 +1193,12 @@ this.state.thisBlock=thisBlock=0;
                               "left": -50,
                               "top": 225,
                               "angle": 0,
-                              "width": 537.62,
+                              "width": 496.65,
                               "height": 48.82,
                               "stroke": null,
                               "strokeWidth": 1,
                               "fill": "black",
-                              "text": "The correct answer is \"j\" because the number shown (1)\nDOES NOT MATCH the total number of dots on the wall (3). ",
+                              "text": "The correct answer is \"j\" because the number shown (1)\nDOES NOT MATCH the total number of dots (3). ",
                               "fontStyle": "normal",
                               "fontWeight": "normal",
                               "fontSize": "20",
@@ -1132,14 +1209,14 @@ this.state.thisBlock=thisBlock=0;
                             {
                               "type": "i-text",
                               "left": -50,
-                              "top": -13,
+                              "top": -12,
                               "angle": 0,
-                              "width": 503.34,
+                              "width": 503.33,
                               "height": 48.82,
                               "stroke": null,
                               "strokeWidth": 1,
                               "fill": "black",
-                              "text": "The correct answer is \"h\" because the number shown (2)\nMATCHES the total number of dots on the wall (2). ",
+                              "text": "The correct answer is \"h\" because the number shown (2)\nMATCHES the total number of dots (2). ",
                               "fontStyle": "normal",
                               "fontWeight": "normal",
                               "fontSize": "20",
@@ -1177,12 +1254,12 @@ this.state.thisBlock=thisBlock=0;
                                   "left": 0,
                                   "top": 0,
                                   "angle": 0,
-                                  "width": 776.06,
-                                  "height": 267.18,
+                                  "width": 776.08,
+                                  "height": 237.03,
                                   "stroke": null,
                                   "strokeWidth": 1,
                                   "fill": "black",
-                                  "text": "You will be shown examples for the YOU condition of the task. \n\nPlease respond with the answer you believe is correct. You will not be\nable to proceed with the task until you reach 100% accuracy on the practice.\n\nRemember:\n\nThe YOU condition is asking if the number shown matches the number \nof dots YOU can see IN TOTAL. ",
+                                  "text": "Please respond with the answer you believe is correct. You will not be\nable to proceed with the task until you reach 100% accuracy on the practice.\n\n\nRemember:\n\nThe YOU condition is asking if the number shown matches the number \nof dots YOU can see IN TOTAL. ",
                                   "fontStyle": "normal",
                                   "fontWeight": "normal",
                                   "fontSize": "23",
@@ -1213,14 +1290,14 @@ this.state.thisBlock=thisBlock=0;
                                   "left": 0,
                                   "top": -225,
                                   "angle": 0,
-                                  "width": 337.92,
+                                  "width": 360.94,
                                   "height": 36.16,
                                   "stroke": null,
                                   "strokeWidth": 1,
                                   "fill": "black",
                                   "text": "YOU Condition Practice",
                                   "fontStyle": "normal",
-                                  "fontWeight": "normal",
+                                  "fontWeight": "bold",
                                   "fontSize": 32,
                                   "fontFamily": "sans-serif",
                                   "lineHeight": 1.16,
@@ -1315,7 +1392,7 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": 0,
                                             "angle": 0,
-                                            "width": 51.28,
+                                            "width": 51.29,
                                             "height": 101.7,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -1345,8 +1422,8 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -1633,8 +1710,8 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -1947,11 +2024,11 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": "-2",
-                                            "top": "8",
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
-                                            "width": 25,
-                                            "height": 56.5,
+                                            "width": 37.26,
+                                            "height": 75.71,
                                             "stroke": null,
                                             "strokeWidth": 1,
                                             "fill": "black",
@@ -2286,11 +2363,11 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": "-2",
-                                            "top": "8",
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
-                                            "width": 25,
-                                            "height": 56.5,
+                                            "width": 37.26,
+                                            "height": 75.71,
                                             "stroke": null,
                                             "strokeWidth": 1,
                                             "fill": "black",
@@ -2659,8 +2736,8 @@ if(this.state.youpractice==5){
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -2994,12 +3071,12 @@ if(this.state.youpractice==5){
                                         "left": 0,
                                         "top": 0,
                                         "angle": 0,
-                                        "width": 702.04,
+                                        "width": 620.36,
                                         "height": 230.52,
                                         "stroke": null,
                                         "strokeWidth": 1,
                                         "fill": "black",
-                                        "text": "Unfortunately, you did not get 100% correct.\n\nIn order to continue with the task, you must get all of \nthe practice questions correct. \n\nPlease try again.",
+                                        "text": "Unfortunately, you did not get 100% correct.\n\nTo continue with the task, you must get ALL of \nthe practice questions correct. \n\nPlease try again.",
                                         "fontStyle": "normal",
                                         "fontWeight": "normal",
                                         "fontSize": "30",
@@ -3056,15 +3133,15 @@ if(this.state.youpractice==5){
                               "left": 0,
                               "top": -100,
                               "angle": 0,
-                              "width": 725.27,
-                              "height": 124.03,
+                              "width": 764.48,
+                              "height": 86.29,
                               "stroke": null,
                               "strokeWidth": 1,
                               "fill": "black",
-                              "text": "You will now be presented with the YOU condition of the task.\n\nPlease try to answer the prompts as quickly and as accurately as possible. \n",
+                              "text": "\nPlease try to answer the prompts as quickly and as accurately as possible. \n",
                               "fontStyle": "normal",
                               "fontWeight": "normal",
-                              "fontSize": "24.5",
+                              "fontSize": "23",
                               "fontFamily": "sans-serif",
                               "lineHeight": 1.16,
                               "textAlign": "center"
@@ -3656,19 +3733,17 @@ if(this.state.youpractice==5){
                             "n": ""
                           },
                           "responses": {},
+                          "title": "you_trials",
                           "messageHandlers": {
                             "run": function anonymous(
 ) {
 //set instruction type 
 this.options.parameters.instruction = "you"
 
-//restart trial and resume CumeTrial and increment Block
-this.state.thisTrial=0 ;
-thisCumeTrial=this.state.thisCumeTrial;
-thisBlock=this.state.thisBlock+1;
+//set block number
+this.options.parameters.thisBlock=1;
 }
                           },
-                          "title": "you_trials",
                           "shuffleGroups": [],
                           "template": {
                             "type": "lab.flow.Sequence",
@@ -3728,14 +3803,13 @@ if(this.options.parameters.display == this.options.parameters.correctanswer){
   this.options.parameters.correctkeypress = "j";
 }
 
-//count trial numbers & blocks
-this.options.parameters.thisBlock=thisBlock ; //static
-thisTrial+=1;
-thisCumeTrial+=1;
-this.options.parameters.thisTrial=thisTrial ;
-this.options.parameters.thisCumeTrial=thisCumeTrial ;
-this.state.thisTrial=thisTrial ;
-this.state.thisCumeTrial=thisCumeTrial ;
+//count trial numbers
+console.log(this.options.id.split('_'));
+console.log(this.options.id.split('_').length);
+
+this.options.parameters.trial_count = parseInt(this.options.id.split('_')[this.options.id.split('_').length-1])+1 ;
+console.log(this.options.parameters.trial_count)
+
 
 }
                             },
@@ -3785,8 +3859,8 @@ this.state.thisCumeTrial=thisCumeTrial ;
                                 "content": [
                                   {
                                     "type": "i-text",
-                                    "left": -2,
-                                    "top": 8,
+                                    "left": 0,
+                                    "top": 7,
                                     "angle": 0,
                                     "width": 700.19,
                                     "height": 75.71,
@@ -4080,12 +4154,12 @@ this.state.thisCumeTrial=thisCumeTrial ;
                               "left": 0,
                               "top": -175,
                               "angle": 0,
-                              "width": 683.24,
+                              "width": 755.89,
                               "height": 28.25,
                               "stroke": null,
                               "strokeWidth": 1,
                               "fill": "black",
-                              "text": "How many dots can the FIGURE see or the ARROW is pointing to?",
+                              "text": "How many dots can the PERSON see or the ARROW is pointing to?",
                               "fontStyle": "normal",
                               "fontWeight": "normal",
                               "fontSize": "25",
@@ -4098,12 +4172,12 @@ this.state.thisCumeTrial=thisCumeTrial ;
                               "left": 0,
                               "top": 200,
                               "angle": 0,
-                              "width": 495.18,
+                              "width": 492.13,
                               "height": 82.54,
                               "stroke": null,
                               "strokeWidth": 1,
                               "fill": "black",
-                              "text": "You should ignore the total number of dots in the room. \n\nNumber Arrow Is Pointing At = 1 = h = CORRECT ",
+                              "text": "Ignore any dots behind them.\n\nNumber Arrow Is Pointing At = 1 = h = CORRECT ",
                               "fontStyle": "normal",
                               "fontWeight": "normal",
                               "fontSize": "22",
@@ -4146,7 +4220,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
                               "left": 0,
                               "top": 275,
                               "angle": 0,
-                              "width": 141.44,
+                              "width": 158.49,
                               "height": 15.82,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -4164,14 +4238,14 @@ this.state.thisCumeTrial=thisCumeTrial ;
                               "left": 0,
                               "top": -250,
                               "angle": 0,
-                              "width": 242.67,
+                              "width": 270.17,
                               "height": 36.16,
                               "stroke": null,
                               "strokeWidth": 1,
                               "fill": "black",
                               "text": "OTHER Condition",
                               "fontStyle": "normal",
-                              "fontWeight": "normal",
+                              "fontWeight": "bold",
                               "fontSize": 32,
                               "fontFamily": "sans-serif",
                               "lineHeight": 1.16,
@@ -4534,12 +4608,12 @@ this.state.thisCumeTrial=thisCumeTrial ;
                                   "left": 0,
                                   "top": 0,
                                   "angle": 0,
-                                  "width": 776.06,
-                                  "height": 267.18,
+                                  "width": 776.08,
+                                  "height": 237.03,
                                   "stroke": null,
                                   "strokeWidth": 1,
                                   "fill": "black",
-                                  "text": "You will be shown examples for the OTHER condition of the task. \n\nPlease respond with the answer you believe is correct. You will not be\nable to proceed with the task until you reach 100% accuracy on the practice.\n\nRemember:\n\nThe OTHER condition is asking if the number shown matches the number \nof dots the FIGURE in the room can “see” or the ARROW is pointing to.",
+                                  "text": "Please respond with the answer you believe is correct. You will not be\nable to proceed with the task until you reach 100% accuracy on the practice.\n\n\nRemember:\n\nThe OTHER condition is asking if the number shown matches the number \nof dots the FIGURE in the room can “see” or the ARROW is pointing to.",
                                   "fontStyle": "normal",
                                   "fontWeight": "normal",
                                   "fontSize": "23",
@@ -4577,7 +4651,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
                                   "fill": "black",
                                   "text": "OTHER Condition Practice",
                                   "fontStyle": "normal",
-                                  "fontWeight": "normal",
+                                  "fontWeight": "bold",
                                   "fontSize": 32,
                                   "fontFamily": "sans-serif",
                                   "lineHeight": 1.16,
@@ -4702,11 +4776,11 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": "-2",
-                                            "top": "8",
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
-                                            "width": 25,
-                                            "height": 56.5,
+                                            "width": 37.26,
+                                            "height": 75.71,
                                             "stroke": null,
                                             "strokeWidth": 1,
                                             "fill": "black",
@@ -5015,11 +5089,11 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": "-2",
-                                            "top": "8",
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
-                                            "width": 25,
-                                            "height": 56.5,
+                                            "width": 37.26,
+                                            "height": 75.71,
                                             "stroke": null,
                                             "strokeWidth": 1,
                                             "fill": "black",
@@ -5342,8 +5416,8 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -5695,8 +5769,8 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -6082,8 +6156,8 @@ if(this.state.otherpractice==5){
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -6413,18 +6487,30 @@ if(this.state.otherpractice==5){
                                   },
                                   {
                                     "type": "lab.canvas.Screen",
+                                    "viewport": [
+                                      800,
+                                      600
+                                    ],
+                                    "files": {},
+                                    "parameters": {},
+                                    "messageHandlers": {},
+                                    "title": "Try Again",
+                                    "tardy": true,
+                                    "responses": {
+                                      "keypress(Space)": "space"
+                                    },
                                     "content": [
                                       {
                                         "type": "i-text",
                                         "left": 0,
                                         "top": 0,
                                         "angle": 0,
-                                        "width": 702.04,
+                                        "width": 620.36,
                                         "height": 230.52,
                                         "stroke": null,
                                         "strokeWidth": 1,
                                         "fill": "black",
-                                        "text": "Unfortunately, you did not get 100% correct.\n\nIn order to continue with the task, you must get all of \nthe practice questions correct. \n\nPlease try again.",
+                                        "text": "Unfortunately, you did not get 100% correct.\n\nTo continue with the task, you must get ALL of \nthe practice questions correct. \n\nPlease try again.",
                                         "fontStyle": "normal",
                                         "fontWeight": "normal",
                                         "fontSize": "30",
@@ -6451,18 +6537,6 @@ if(this.state.otherpractice==5){
                                         "textAlign": "center"
                                       }
                                     ],
-                                    "viewport": [
-                                      800,
-                                      600
-                                    ],
-                                    "files": {},
-                                    "parameters": {},
-                                    "title": "Try Again",
-                                    "tardy": true,
-                                    "responses": {
-                                      "keypress(Space)": "space"
-                                    },
-                                    "messageHandlers": {},
                                     "skip": "${this.state.youpractice==5}"
                                   }
                                 ]
@@ -6493,12 +6567,12 @@ if(this.state.otherpractice==5){
                               "left": 0,
                               "top": -75,
                               "angle": 0,
-                              "width": 733.83,
-                              "height": 159.33,
+                              "width": 758.09,
+                              "height": 116.44,
                               "stroke": null,
                               "strokeWidth": 1,
                               "fill": "black",
-                              "text": "You will now be presented with the OTHER condition of the task.\n\nPlease try to answer the prompts as quickly and as accurately as possible.\n\n",
+                              "text": "\nPlease try to answer the prompts as quickly and as accurately as possible.\n\n",
                               "fontStyle": "normal",
                               "fontWeight": "normal",
                               "fontSize": "23",
@@ -6511,7 +6585,7 @@ if(this.state.otherpractice==5){
                               "left": 0,
                               "top": 275,
                               "angle": 0,
-                              "width": 141.44,
+                              "width": 158.49,
                               "height": 15.82,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -6529,7 +6603,7 @@ if(this.state.otherpractice==5){
                               "left": 0,
                               "top": -225,
                               "angle": 0,
-                              "width": 543.65,
+                              "width": 566.7,
                               "height": 56.5,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -6544,7 +6618,7 @@ if(this.state.otherpractice==5){
                             },
                             {
                               "type": "image",
-                              "left": "200",
+                              "left": 200,
                               "top": 100,
                               "angle": 0,
                               "width": 272,
@@ -6556,7 +6630,7 @@ if(this.state.otherpractice==5){
                             },
                             {
                               "type": "image",
-                              "left": "-215",
+                              "left": -215,
                               "top": 100,
                               "angle": 0,
                               "width": 272,
@@ -7093,19 +7167,17 @@ if(this.state.otherpractice==5){
                             "n": ""
                           },
                           "responses": {},
+                          "title": "other_trials",
                           "messageHandlers": {
                             "run": function anonymous(
 ) {
 //set instruction type 
 this.options.parameters.instruction = "other"
 
-//restart trial and resume CumeTrial and increment Block
-thisTrial=0 ;
-thisCumeTrial=this.state.thisCumeTrial;
-thisBlock=this.state.thisBlock+1;
+//increment Block
+this.options.parameters.thisBlock=2;
 }
                           },
-                          "title": "other_trials",
                           "shuffleGroups": [],
                           "template": {
                             "type": "lab.flow.Sequence",
@@ -7165,14 +7237,13 @@ if(this.options.parameters.display == this.options.parameters.correctanswer){
   this.options.parameters.correctkeypress = "j";
 }
 
-//count trial numbers & blocks
-this.options.parameters.thisBlock=thisBlock ; //static
-thisTrial+=1;
-thisCumeTrial+=1;
-this.options.parameters.thisTrial=thisTrial ;
-this.options.parameters.thisCumeTrial=thisCumeTrial ;
-this.state.thisTrial=thisTrial ;
-this.state.thisCumeTrial=thisCumeTrial ;
+//count trial numbers
+console.log(this.options.id.split('_'));
+console.log(this.options.id.split('_').length);
+
+this.options.parameters.trial_count = parseInt(this.options.id.split('_')[this.options.id.split('_').length-1])+1 ;
+console.log(this.options.parameters.trial_count)
+
 
 }
                             },
@@ -7222,8 +7293,8 @@ this.state.thisCumeTrial=thisCumeTrial ;
                                 "content": [
                                   {
                                     "type": "i-text",
-                                    "left": -2,
-                                    "top": 8,
+                                    "left": 0,
+                                    "top": 7,
                                     "angle": 0,
                                     "width": 700.19,
                                     "height": 75.71,
@@ -7597,18 +7668,36 @@ this.state.thisCumeTrial=thisCumeTrial ;
                         },
                         {
                           "type": "lab.canvas.Screen",
+                          "viewport": [
+                            800,
+                            600
+                          ],
+                          "files": {
+                            "S1_O0_FR_purple.bmp": "embedded\u002Ff934b3664e042306fb58a7ce21e4c5f3d97d45088c62eed6cc46791e837b4ab5.bmp",
+                            "Waterfall_Pic.bmp": "embedded\u002Fd4bf7232b1f4dd8a7c7babd2eebf4b4b8de8d3af80db2fab0492252dba5ccdd1.bmp",
+                            "S1_O1_MR_orange.bmp": "embedded\u002F5b2b45a25228d0b6dd5254ef977fd798226f7396098744d3b55b9a1c030028e9.bmp",
+                            "S2_O2_MR_orange.bmp": "embedded\u002F11ae6adb163bf3846d889ddc1c334d0e2abae6f51fc588f855698e45e3b00232.bmp",
+                            "Threat_Pic.bmp": "embedded\u002Fe328a50aac5c9acf52e9c072738bbd33e6f6c8a524ae56cc233572dc4d46966f.bmp"
+                          },
+                          "responses": {
+                            "keypress(Space)": "space"
+                          },
+                          "parameters": {},
+                          "messageHandlers": {},
+                          "title": "instr_color",
+                          "timeout": "180000",
                           "content": [
                             {
                               "type": "i-text",
                               "left": 0,
                               "top": -225,
                               "angle": 0,
-                              "width": 778.61,
+                              "width": 611.07,
                               "height": 116.44,
                               "stroke": null,
                               "strokeWidth": 1,
                               "fill": "black",
-                              "text": "The numbers shown and the dots in the room will be either purple or orange.\n\nThe colors will tell you if a waterfall or nails on a chalkboard \nvideo is likely to play.",
+                              "text": "The numbers and dots will now be either purple or orange.\n\nThe colors will tell you if a waterfall or nails on a chalkboard \nvideo is likely to play.",
                               "fontStyle": "normal",
                               "fontWeight": "normal",
                               "fontSize": "23",
@@ -7639,7 +7728,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
                               "left": 200,
                               "top": -100,
                               "angle": 0,
-                              "width": 283.31,
+                              "width": 283.32,
                               "height": 82.54,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -7754,25 +7843,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
                               "lineHeight": 1.16,
                               "textAlign": "center"
                             }
-                          ],
-                          "viewport": [
-                            800,
-                            600
-                          ],
-                          "files": {
-                            "S1_O0_FR_purple.bmp": "embedded\u002Ff934b3664e042306fb58a7ce21e4c5f3d97d45088c62eed6cc46791e837b4ab5.bmp",
-                            "Waterfall_Pic.bmp": "embedded\u002Fd4bf7232b1f4dd8a7c7babd2eebf4b4b8de8d3af80db2fab0492252dba5ccdd1.bmp",
-                            "S1_O1_MR_orange.bmp": "embedded\u002F5b2b45a25228d0b6dd5254ef977fd798226f7396098744d3b55b9a1c030028e9.bmp",
-                            "S2_O2_MR_orange.bmp": "embedded\u002F11ae6adb163bf3846d889ddc1c334d0e2abae6f51fc588f855698e45e3b00232.bmp",
-                            "Threat_Pic.bmp": "embedded\u002Fe328a50aac5c9acf52e9c072738bbd33e6f6c8a524ae56cc233572dc4d46966f.bmp"
-                          },
-                          "responses": {
-                            "keypress(Space)": "space"
-                          },
-                          "parameters": {},
-                          "messageHandlers": {},
-                          "title": "instr_color",
-                          "timeout": "180000"
+                          ]
                         }
                       ]
                     }
@@ -7860,8 +7931,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
                       "stroke": null,
                       "strokeWidth": 0,
                       "fill": "black",
-                      "src": "${ this.files[\"self_S1_A0_FL_black 2_recolored.bmp\"] }",
-                      "autoScale": undefined
+                      "src": "${ this.files[\"self_S1_A0_FL_black 2_recolored.bmp\"] }"
                     },
                     {
                       "type": "image",
@@ -7873,8 +7943,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
                       "stroke": null,
                       "strokeWidth": 0,
                       "fill": "black",
-                      "src": "${ this.files[\"self_S3_O2_FR_black 2_recolored.bmp\"] }",
-                      "autoScale": undefined
+                      "src": "${ this.files[\"self_S3_O2_FR_black 2_recolored.bmp\"] }"
                     }
                   ]
                 },
@@ -8410,6 +8479,8 @@ this.state.thisCumeTrial=thisCumeTrial ;
 //set instruction type 
 this.options.parameters.instruction = "you"
 
+this.options.parameters.thisBlock=3;
+
 //this.parameters.videoArray = new Array(3,4,5);
 this.parameters.videoArray = new Array(1,2,3); //for debugging
 //this.state.thisInterval = this.random.choice(this.parameters.videoArray) + 1 ;
@@ -8440,10 +8511,6 @@ console.log(thisInterval)
 thisColor='';
 thisVideo='';
 
-//restart trial and resume CumeTrial and increment Block
-thisTrial=0 ;
-thisCumeTrial=this.state.thisCumeTrial;
-thisBlock=this.state.thisBlock+1;
 }
                   },
                   "shuffleGroups": [],
@@ -8563,14 +8630,13 @@ this.parameters.vidIntervals = thisInterval ;
 console.log("parameters.vidIntervals is now")
 console.log(this.parameters.vidIntervals)
 
-//count trial numbers & blocks
-this.options.parameters.thisBlock=thisBlock ; //static
-thisTrial+=1;
-thisCumeTrial+=1;
-this.options.parameters.thisTrial=thisTrial ;
-this.options.parameters.thisCumeTrial=thisCumeTrial ;
-this.state.thisTrial=thisTrial ;
-this.state.thisCumeTrial=thisCumeTrial ;
+//count trial numbers
+console.log(this.options.id.split('_'));
+console.log(this.options.id.split('_').length);
+
+this.options.parameters.trial_count = parseInt(this.options.id.split('_')[this.options.id.split('_').length-1])+1 ;
+console.log(this.options.parameters.trial_count)
+
 }
                     },
                     "content": [
@@ -8619,8 +8685,8 @@ this.state.thisCumeTrial=thisCumeTrial ;
                         "content": [
                           {
                             "type": "i-text",
-                            "left": -2,
-                            "top": 8,
+                            "left": 0,
+                            "top": 7,
                             "angle": 0,
                             "width": 700.19,
                             "height": 75.71,
@@ -8862,7 +8928,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
 }
                         },
                         "title": "Waterfall 1",
-                        "content": "\u003Chead\u003E\r\n  \u003Clink rel=\"preload\" as=\"video\" onload=\"this.rel = 'stylesheet'\" href=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FWaterfall1.mp4  media:{width=\"80%\"}\"\u003E\r\n\u003C\u002Fhead\u003E\r\n\r\n\u003Cmain class=\"content-horizontal-center content-vertical-center\"\u003E\r\n  \u003Cvideo loop=\"true\" autoplay=\"autoplay\" preload=\"auto\" width=\"80%\"\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FWaterfall1.mp4\" type=\"video\u002Fmp4\"\u003E\r\n  \u003C\u002Fvideo\u003E\r\n\u003C\u002Fmain\u003E",
+                        "content": "\u003Chead\u003E\r\n  \u003Clink rel=\"preload\" as=\"video\" onload=\"this.rel = 'stylesheet'\" href=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FWaterfall1.mp4\" media:{width=\"80%\"}\u003E\r\n\u003C\u002Fhead\u003E\r\n\r\n\u003Cmain class=\"content-horizontal-center content-vertical-center\"\u003E\r\n  \u003Cvideo loop=\"true\" autoplay=\"autoplay\" preload=\"auto\" width=\"80%\"\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FWaterfall1.mp4\" type=\"video\u002Fmp4\"\u003E\r\n  \u003C\u002Fvideo\u003E\r\n\u003C\u002Fmain\u003E",
                         "timeout": "3000",
                         "skip": "${this.parameters.myvideo != 'W1' || this.parameters.vidIntervals != 0}"
                       },
@@ -8919,7 +8985,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
 }
                         },
                         "title": "Nails 3",
-                        "content": "\u003Chead\u003E\r\n  \u003Clink rel=\"preload\" as=\"video\" onload=\"this.rel = 'stylesheet'\" href=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FNailsOnChalkboard_Clip3.mp4\" media:{width=\"80%\"}\u003E\r\n\u003C\u002Fhead\u003E\r\n\r\n\r\n\u003Cmain class=\"content-horizontal-center content-vertical-center\"\u003E\r\n  \u003Cvideo loop=\"true\" autoplay=\"autoplay\" preload=\"auto\" width=\"80%\"\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FNailsOnChalkboard_Clip3.mp4\" type=\"video\u002Fmp4\"\u003E\r\n  \u003C\u002Fvideo\u003E\r\n\u003C\u002Fmain\u003E",
+                        "content": "\u003Chead\u003E\r\n  \u003Clink rel=\"preload\" as=\"video\" onload=\"this.rel = 'stylesheet'\" href=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FWaterfall1.mp4\" media:{width=\"80%\"}\u003E\r\n\u003C\u002Fhead\u003E\r\n\r\n\r\n\u003Cmain class=\"content-horizontal-center content-vertical-center\"\u003E\r\n  \u003Cvideo loop=\"true\" autoplay=\"autoplay\" preload=\"auto\" width=\"80%\"\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FNailsOnChalkboard_Clip3.mp4\" type=\"video\u002Fmp4\"\u003E\r\n  \u003C\u002Fvideo\u003E\r\n\u003C\u002Fmain\u003E",
                         "timeout": "3000",
                         "skip": "${this.parameters.myvideo != 'N3' || this.parameters.vidIntervals != 0}"
                       }
@@ -9111,8 +9177,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
                       "stroke": null,
                       "strokeWidth": 0,
                       "fill": "black",
-                      "src": "${ this.files[\"other_S1_A0_FL_black.bmp\"] }",
-                      "autoScale": undefined
+                      "src": "${ this.files[\"other_S1_A0_FL_black.bmp\"] }"
                     },
                     {
                       "type": "image",
@@ -9124,8 +9189,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
                       "stroke": null,
                       "strokeWidth": 0,
                       "fill": "black",
-                      "src": "${ this.files[\"other_S3_O2_FR_black.bmp\"] }",
-                      "autoScale": undefined
+                      "src": "${ this.files[\"other_S3_O2_FR_black.bmp\"] }"
                     }
                   ]
                 },
@@ -9661,6 +9725,8 @@ this.state.thisCumeTrial=thisCumeTrial ;
 //set instruction type 
 this.options.parameters.instruction = "other"
 
+this.options.parameters.thisBlock=4;
+
 //this.parameters.videoArray = new Array(3,4,5);
 this.parameters.videoArray = new Array(1,2,3); //for debugging
 //this.state.thisInterval = this.random.choice(this.parameters.videoArray) + 1 ;
@@ -9691,10 +9757,6 @@ console.log(thisInterval)
 thisColor='';
 thisVideo='';
 
-//restart trial and resume CumeTrial and increment Block
-thisTrial=0 ;
-thisCumeTrial=this.state.thisCumeTrial;
-thisBlock=this.state.thisBlock+1;
 }
                   },
                   "shuffleGroups": [],
@@ -9814,14 +9876,12 @@ this.parameters.vidIntervals = thisInterval ;
 console.log("parameters.vidIntervals is now")
 console.log(this.parameters.vidIntervals)
 
-//count trial numbers & blocks
-this.options.parameters.thisBlock=thisBlock ; //static
-thisTrial+=1;
-thisCumeTrial+=1;
-this.options.parameters.thisTrial=thisTrial ;
-this.options.parameters.thisCumeTrial=thisCumeTrial ;
-this.state.thisTrial=thisTrial ;
-this.state.thisCumeTrial=thisCumeTrial ;
+//count trial numbers
+console.log(this.options.id.split('_'));
+console.log(this.options.id.split('_').length);
+
+this.options.parameters.trial_count = parseInt(this.options.id.split('_')[this.options.id.split('_').length-1])+1 ;
+console.log(this.options.parameters.trial_count)
 
 }
                     },
@@ -9871,8 +9931,8 @@ this.state.thisCumeTrial=thisCumeTrial ;
                         "content": [
                           {
                             "type": "i-text",
-                            "left": -2,
-                            "top": 8,
+                            "left": 0,
+                            "top": 7,
                             "angle": 0,
                             "width": 700.19,
                             "height": 75.71,
@@ -10114,7 +10174,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
 }
                         },
                         "title": "Waterfall 1",
-                        "content": "\u003Chead\u003E\r\n  \u003Clink rel=\"preload\" as=\"video\" onload=\"this.rel = 'stylesheet'\" href=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FWaterfall1.mp4  media:{width=\"80%\"}\"\u003E\r\n\u003C\u002Fhead\u003E\r\n\r\n\u003Cmain class=\"content-horizontal-center content-vertical-center\"\u003E\r\n  \u003Cvideo loop=\"true\" autoplay=\"autoplay\" preload=\"auto\" width=\"80%\"\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FWaterfall1.mp4\" type=\"video\u002Fmp4\"\u003E\r\n  \u003C\u002Fvideo\u003E\r\n\u003C\u002Fmain\u003E",
+                        "content": "\u003Chead\u003E\r\n  \u003Clink rel=\"preload\" as=\"video\" onload=\"this.rel = 'stylesheet'\" href=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FWaterfall1.mp4\" media:{width=\"80%\"}\u003E\r\n\u003C\u002Fhead\u003E\r\n\r\n\u003Cmain class=\"content-horizontal-center content-vertical-center\"\u003E\r\n  \u003Cvideo loop=\"true\" autoplay=\"autoplay\" preload=\"auto\" width=\"80%\"\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FWaterfall1.mp4\" type=\"video\u002Fmp4\"\u003E\r\n  \u003C\u002Fvideo\u003E\r\n\u003C\u002Fmain\u003E",
                         "timeout": "3000",
                         "skip": "${this.parameters.myvideo != 'W1' || this.parameters.vidIntervals != 0}"
                       },
@@ -10171,7 +10231,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
 }
                         },
                         "title": "Nails 3",
-                        "content": "\u003Chead\u003E\r\n  \u003Clink rel=\"preload\" as=\"video\" onload=\"this.rel = 'stylesheet'\" href=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FNailsOnChalkboard_Clip3.mp4\" media:{width=\"80%\"}\u003E\r\n\u003C\u002Fhead\u003E\r\n\r\n\r\n\u003Cmain class=\"content-horizontal-center content-vertical-center\"\u003E\r\n  \u003Cvideo loop=\"true\" autoplay=\"autoplay\" preload=\"auto\" width=\"80%\"\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FNailsOnChalkboard_Clip3.mp4\" type=\"video\u002Fmp4\"\u003E\r\n  \u003C\u002Fvideo\u003E\r\n\u003C\u002Fmain\u003E",
+                        "content": "\u003Chead\u003E\r\n  \u003Clink rel=\"preload\" as=\"video\" onload=\"this.rel = 'stylesheet'\" href=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FWaterfall1.mp4\" media:{width=\"80%\"}\u003E\r\n\u003C\u002Fhead\u003E\r\n\r\n\r\n\u003Cmain class=\"content-horizontal-center content-vertical-center\"\u003E\r\n  \u003Cvideo loop=\"true\" autoplay=\"autoplay\" preload=\"auto\" width=\"80%\"\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FNailsOnChalkboard_Clip3.mp4\" type=\"video\u002Fmp4\"\u003E\r\n  \u003C\u002Fvideo\u003E\r\n\u003C\u002Fmain\u003E",
                         "timeout": "3000",
                         "skip": "${this.parameters.myvideo != 'N3' || this.parameters.vidIntervals != 0}"
                       }
@@ -10185,18 +10245,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
               "files": {},
               "responses": {},
               "parameters": {},
-              "messageHandlers": {
-                "before:prepare": function anonymous(
-) {
-thisTrial=1;
-thisBlock=1;
-thisCumeTrial=1;
-this.state.thisTrial=thisTrial ;
-this.state.thisCumeTrial=thisCumeTrial ;
-this.state.thisBlock=thisBlock;
-
-}
-              },
+              "messageHandlers": {},
               "title": "Other_Instructions_First",
               "skip": "${this.parameters.myInstruction == 'you'}",
               "content": [
@@ -10361,10 +10410,10 @@ this.state.thisBlock=thisBlock;
                           "content": [
                             {
                               "type": "i-text",
-                              "left": -75,
+                              "left": -60,
                               "top": -64,
                               "angle": 0,
-                              "width": 273.02,
+                              "width": 273.03,
                               "height": 28.25,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -10441,7 +10490,7 @@ this.state.thisBlock=thisBlock;
                               "left": -200,
                               "top": 200,
                               "angle": 0,
-                              "width": 356.63,
+                              "width": 356.65,
                               "height": 116.44,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -10506,7 +10555,7 @@ this.state.thisBlock=thisBlock;
                               "left": 0,
                               "top": -200,
                               "angle": 0,
-                              "width": 787.95,
+                              "width": 787.96,
                               "height": 93.79,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -10613,13 +10662,30 @@ this.state.thisBlock=thisBlock;
                         },
                         {
                           "type": "lab.canvas.Screen",
+                          "files": {
+                            "S3_O2_FL.bmp": "embedded\u002F400781846199e8ef063c37827688df90211f4b808391673884d1bafd5fa324b3.bmp",
+                            "S3_A1_MR.bmp": "embedded\u002Fedaba8ca1badc87a84602bfaae55cd96564571ff7f54f44c07d1c7ee18df6187.bmp",
+                            "S1_A0_FR.bmp": "embedded\u002Fb56f7e11ae73704f924ebc05fc9de570f771855ac7812f233c46b4316466d485.bmp",
+                            "S2_O0_MR.bmp": "embedded\u002F0d51511c81208b7e9f6b626db9ab95e22699aef5ac6c581cd866b8c5a87ce6f8.bmp"
+                          },
+                          "parameters": {},
+                          "responses": {
+                            "keydown(Space)": "Space"
+                          },
+                          "messageHandlers": {},
+                          "viewport": [
+                            800,
+                            600
+                          ],
+                          "title": "other_example",
+                          "timeout": "180000",
                           "content": [
                             {
                               "type": "i-text",
                               "left": 0,
                               "top": -175,
                               "angle": 0,
-                              "width": 683.24,
+                              "width": 744.76,
                               "height": 28.25,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -10637,12 +10703,12 @@ this.state.thisBlock=thisBlock;
                               "left": 0,
                               "top": 200,
                               "angle": 0,
-                              "width": 495.18,
+                              "width": 492.13,
                               "height": 82.54,
                               "stroke": null,
                               "strokeWidth": 1,
                               "fill": "black",
-                              "text": "You should ignore the total number of dots in the room. \n\nNumber Arrow Is Pointing At = 1 = h = CORRECT ",
+                              "text": "Ignore any dots behind them.\n\nNumber Arrow Is Pointing At = 1 = h = CORRECT ",
                               "fontStyle": "normal",
                               "fontWeight": "normal",
                               "fontSize": "22",
@@ -10685,7 +10751,7 @@ this.state.thisBlock=thisBlock;
                               "left": 0,
                               "top": 275,
                               "angle": 0,
-                              "width": 141.44,
+                              "width": 158.49,
                               "height": 15.82,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -10703,37 +10769,20 @@ this.state.thisBlock=thisBlock;
                               "left": 0,
                               "top": -250,
                               "angle": 0,
-                              "width": 242.67,
+                              "width": 270.17,
                               "height": 36.16,
                               "stroke": null,
                               "strokeWidth": 1,
                               "fill": "black",
                               "text": "OTHER Condition",
                               "fontStyle": "normal",
-                              "fontWeight": "normal",
+                              "fontWeight": "bold",
                               "fontSize": 32,
                               "fontFamily": "sans-serif",
                               "lineHeight": 1.16,
                               "textAlign": "center"
                             }
-                          ],
-                          "files": {
-                            "S3_O2_FL.bmp": "embedded\u002F400781846199e8ef063c37827688df90211f4b808391673884d1bafd5fa324b3.bmp",
-                            "S3_A1_MR.bmp": "embedded\u002Fedaba8ca1badc87a84602bfaae55cd96564571ff7f54f44c07d1c7ee18df6187.bmp",
-                            "S1_A0_FR.bmp": "embedded\u002Fb56f7e11ae73704f924ebc05fc9de570f771855ac7812f233c46b4316466d485.bmp",
-                            "S2_O0_MR.bmp": "embedded\u002F0d51511c81208b7e9f6b626db9ab95e22699aef5ac6c581cd866b8c5a87ce6f8.bmp"
-                          },
-                          "parameters": {},
-                          "responses": {
-                            "keydown(Space)": "Space"
-                          },
-                          "messageHandlers": {},
-                          "viewport": [
-                            800,
-                            600
-                          ],
-                          "title": "other_example",
-                          "timeout": "180000"
+                          ]
                         },
                         {
                           "type": "lab.canvas.Screen",
@@ -11083,18 +11132,19 @@ this.state.thisBlock=thisBlock;
                               "parameters": {},
                               "messageHandlers": {},
                               "timeout": "180000",
+                              "title": "other_practice_instructions",
                               "content": [
                                 {
                                   "type": "i-text",
                                   "left": 0,
                                   "top": 0,
                                   "angle": 0,
-                                  "width": 746.94,
-                                  "height": 284.6,
+                                  "width": 776.08,
+                                  "height": 237.03,
                                   "stroke": null,
                                   "strokeWidth": 1,
                                   "fill": "black",
-                                  "text": "You will be shown examples for the OTHER condition of the task. \n\nPlease respond with the answer you believe is correct. You will not be\nable to proceed with the task until you reach 100% accuracy on the practice.\n\nRemember:\n\nThe OTHER condition is asking if the number shown matches the number \nof dots the FIGURE in the room can “see” or the ARROW is pointing to.",
+                                  "text": "Please respond with the answer you believe is correct. You will not be\nable to proceed with the task until you reach 100% accuracy on the practice.\n\n\nRemember:\n\nThe OTHER condition is asking if the number shown matches the number \nof dots the FIGURE in the room can “see” or the ARROW is pointing to.",
                                   "fontStyle": "normal",
                                   "fontWeight": "normal",
                                   "fontSize": "23",
@@ -11107,7 +11157,7 @@ this.state.thisBlock=thisBlock;
                                   "left": 0,
                                   "top": 275,
                                   "angle": 0,
-                                  "width": 141.44,
+                                  "width": 158.49,
                                   "height": 15.82,
                                   "stroke": null,
                                   "strokeWidth": 1,
@@ -11125,21 +11175,20 @@ this.state.thisBlock=thisBlock;
                                   "left": 0,
                                   "top": -225,
                                   "angle": 0,
-                                  "width": 353.72,
+                                  "width": 380.58,
                                   "height": 36.16,
                                   "stroke": null,
                                   "strokeWidth": 1,
                                   "fill": "black",
                                   "text": "OTHER Condition Practice",
                                   "fontStyle": "normal",
-                                  "fontWeight": "normal",
+                                  "fontWeight": "bold",
                                   "fontSize": 32,
                                   "fontFamily": "sans-serif",
                                   "lineHeight": 1.16,
                                   "textAlign": "center"
                                 }
-                              ],
-                              "title": "other_practice_instructions"
+                              ]
                             },
                             {
                               "type": "lab.flow.Loop",
@@ -11228,7 +11277,7 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": 0,
                                             "angle": 0,
-                                            "width": 51.29,
+                                            "width": 51.28,
                                             "height": 101.7,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -11258,8 +11307,8 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -11334,6 +11383,7 @@ this.options.events['keypress'] = function(e) {
                                         "messageHandlers": {},
                                         "title": "Feedback",
                                         "timeout": "2000",
+                                        "tardy": true,
                                         "content": [
                                           {
                                             "type": "i-text",
@@ -11353,8 +11403,7 @@ this.options.events['keypress'] = function(e) {
                                             "lineHeight": 1.16,
                                             "textAlign": "center"
                                           }
-                                        ],
-                                        "tardy": true
+                                        ]
                                       },
                                       {
                                         "type": "lab.canvas.Screen",
@@ -11441,7 +11490,7 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": 125,
                                             "angle": 0,
-                                            "width": 715.79,
+                                            "width": 656.63,
                                             "height": 220.37,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -11459,7 +11508,7 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": 275,
                                             "angle": 0,
-                                            "width": 158.49,
+                                            "width": 141.44,
                                             "height": 15.82,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -11477,7 +11526,7 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": -100,
                                             "angle": 0,
-                                            "width": 61.08,
+                                            "width": 55.62,
                                             "height": 113,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -11539,10 +11588,10 @@ this.options.events['keypress'] = function(e) {
                                           {
                                             "type": "i-text",
                                             "left": 0,
-                                            "top": 0,
+                                            "top": "0",
                                             "angle": 0,
-                                            "width": 51.28,
-                                            "height": 101.7,
+                                            "width": 56.98,
+                                            "height": 113,
                                             "stroke": null,
                                             "strokeWidth": 1,
                                             "fill": "black",
@@ -11571,11 +11620,11 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": "-2",
-                                            "top": "8",
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
-                                            "width": 25,
-                                            "height": 56.5,
+                                            "width": 37.26,
+                                            "height": 75.71,
                                             "stroke": null,
                                             "strokeWidth": 1,
                                             "fill": "black",
@@ -11660,13 +11709,14 @@ this.options.events['keypress'] = function(e) {
                                         "messageHandlers": {},
                                         "title": "Feedback",
                                         "timeout": "2000",
+                                        "tardy": true,
                                         "content": [
                                           {
                                             "type": "i-text",
                                             "left": 0,
                                             "top": 0,
                                             "angle": 0,
-                                            "width": 265.03,
+                                            "width": 235.84,
                                             "height": 36.16,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -11679,8 +11729,7 @@ this.options.events['keypress'] = function(e) {
                                             "lineHeight": 1.16,
                                             "textAlign": "center"
                                           }
-                                        ],
-                                        "tardy": true
+                                        ]
                                       },
                                       {
                                         "type": "lab.canvas.Screen",
@@ -11768,7 +11817,7 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": 100,
                                             "angle": 0,
-                                            "width": 759.32,
+                                            "width": 758.89,
                                             "height": 220.37,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -11898,8 +11947,8 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": "-2",
-                                            "top": "8",
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -12000,13 +12049,14 @@ this.options.events['keypress'] = function(e) {
                                         "messageHandlers": {},
                                         "title": "Feedback",
                                         "timeout": "2000",
+                                        "tardy": true,
                                         "content": [
                                           {
                                             "type": "i-text",
                                             "left": 0,
                                             "top": 0,
                                             "angle": 0,
-                                            "width": 235.84,
+                                            "width": 265.03,
                                             "height": 36.16,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -12019,8 +12069,7 @@ this.options.events['keypress'] = function(e) {
                                             "lineHeight": 1.16,
                                             "textAlign": "center"
                                           }
-                                        ],
-                                        "tardy": true
+                                        ]
                                       },
                                       {
                                         "type": "lab.canvas.Screen",
@@ -12122,15 +12171,15 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": 125,
                                             "angle": 0,
-                                            "width": 732.15,
-                                            "height": 220.37,
+                                            "width": 744.39,
+                                            "height": 206.88,
                                             "stroke": null,
                                             "strokeWidth": 1,
                                             "fill": "black",
                                             "text": "The Correct keypress is \"j\".\n\nThe number shown (3) DOES NOT MATCH the number of dots the arrow\n is facing (0).\n\n\n",
                                             "fontStyle": "normal",
                                             "fontWeight": "normal",
-                                            "fontSize": "24",
+                                            "fontSize": "23",
                                             "fontFamily": "sans-serif",
                                             "lineHeight": 1.16,
                                             "textAlign": "center"
@@ -12140,7 +12189,7 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": 275,
                                             "angle": 0,
-                                            "width": 141.44,
+                                            "width": 158.49,
                                             "height": 15.82,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -12158,7 +12207,7 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": -100,
                                             "angle": 0,
-                                            "width": 33.3,
+                                            "width": 27.78,
                                             "height": 113,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -12221,8 +12270,8 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": 0,
                                             "angle": 0,
-                                            "width": 28.49,
-                                            "height": 56.5,
+                                            "width": 51.28,
+                                            "height": 101.7,
                                             "stroke": null,
                                             "strokeWidth": 1,
                                             "fill": "black",
@@ -12230,7 +12279,7 @@ this.options.events['keypress'] = function(e) {
                                             "fontStyle": "normal",
                                             "fontWeight": "bold",
                                             "fontSize": "90",
-                                            "fontFamily": "sans-serif",
+                                            "fontFamily": "serif",
                                             "lineHeight": 1.16,
                                             "textAlign": "center"
                                           }
@@ -12251,8 +12300,8 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -12366,6 +12415,7 @@ this.options.events['keypress'] = function(e) {
                                         "messageHandlers": {},
                                         "title": "Feedback",
                                         "timeout": "2000",
+                                        "tardy": true,
                                         "content": [
                                           {
                                             "type": "i-text",
@@ -12385,8 +12435,7 @@ this.options.events['keypress'] = function(e) {
                                             "lineHeight": 1.16,
                                             "textAlign": "center"
                                           }
-                                        ],
-                                        "tardy": true
+                                        ]
                                       },
                                       {
                                         "type": "lab.canvas.Screen",
@@ -12608,7 +12657,7 @@ if(this.state.otherpractice==5){
                                             "left": 0,
                                             "top": 0,
                                             "angle": 0,
-                                            "width": 52.56,
+                                            "width": 51.28,
                                             "height": 101.7,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -12617,7 +12666,7 @@ if(this.state.otherpractice==5){
                                             "fontStyle": "normal",
                                             "fontWeight": "bold",
                                             "fontSize": "90",
-                                            "fontFamily": "sans-serif",
+                                            "fontFamily": "serif",
                                             "lineHeight": 1.16,
                                             "textAlign": "center"
                                           }
@@ -12638,8 +12687,8 @@ if(this.state.otherpractice==5){
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -12766,13 +12815,14 @@ if(this.state.otherpractice==5){
                                         "messageHandlers": {},
                                         "title": "Feedback",
                                         "timeout": "2000",
+                                        "tardy": true,
                                         "content": [
                                           {
                                             "type": "i-text",
                                             "left": 0,
                                             "top": 0,
                                             "angle": 0,
-                                            "width": 235.84,
+                                            "width": 265.03,
                                             "height": 36.16,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -12785,8 +12835,7 @@ if(this.state.otherpractice==5){
                                             "lineHeight": 1.16,
                                             "textAlign": "center"
                                           }
-                                        ],
-                                        "tardy": true
+                                        ]
                                       },
                                       {
                                         "type": "lab.canvas.Screen",
@@ -12907,6 +12956,7 @@ if(this.state.otherpractice==5){
                                         "parameters": {},
                                         "messageHandlers": {},
                                         "timeout": "180000",
+                                        "title": "correct_answer_5_practice_trial",
                                         "content": [
                                           {
                                             "type": "i-text",
@@ -12962,25 +13012,36 @@ if(this.state.otherpractice==5){
                                             "lineHeight": 1.16,
                                             "textAlign": "center"
                                           }
-                                        ],
-                                        "title": "correct_answer_5_practice_trial"
+                                        ]
                                       }
                                     ]
                                   },
                                   {
                                     "type": "lab.canvas.Screen",
+                                    "viewport": [
+                                      800,
+                                      600
+                                    ],
+                                    "files": {},
+                                    "parameters": {},
+                                    "messageHandlers": {},
+                                    "title": "Try Again",
+                                    "tardy": true,
+                                    "responses": {
+                                      "keypress(Space)": "space"
+                                    },
                                     "content": [
                                       {
                                         "type": "i-text",
                                         "left": 0,
                                         "top": 0,
                                         "angle": 0,
-                                        "width": 702.04,
+                                        "width": 620.36,
                                         "height": 230.52,
                                         "stroke": null,
                                         "strokeWidth": 1,
                                         "fill": "black",
-                                        "text": "Unfortunately, you did not get 100% correct.\n\nIn order to continue with the task, you must get all of \nthe practice questions correct. \n\nPlease try again.",
+                                        "text": "Unfortunately, you did not get 100% correct.\n\nTo continue with the task, you must get ALL of \nthe practice questions correct. \n\nPlease try again.",
                                         "fontStyle": "normal",
                                         "fontWeight": "normal",
                                         "fontSize": "30",
@@ -12993,7 +13054,7 @@ if(this.state.otherpractice==5){
                                         "left": 0,
                                         "top": 275,
                                         "angle": 0,
-                                        "width": 141.44,
+                                        "width": 158.49,
                                         "height": 15.82,
                                         "stroke": null,
                                         "strokeWidth": 1,
@@ -13007,18 +13068,6 @@ if(this.state.otherpractice==5){
                                         "textAlign": "center"
                                       }
                                     ],
-                                    "viewport": [
-                                      800,
-                                      600
-                                    ],
-                                    "files": {},
-                                    "parameters": {},
-                                    "title": "Try Again",
-                                    "tardy": true,
-                                    "responses": {
-                                      "keypress(Space)": "space"
-                                    },
-                                    "messageHandlers": {},
                                     "skip": "${this.state.youpractice==5}"
                                   }
                                 ]
@@ -13049,12 +13098,12 @@ if(this.state.otherpractice==5){
                               "left": 0,
                               "top": -75,
                               "angle": 0,
-                              "width": 733.83,
-                              "height": 159.33,
+                              "width": 791.06,
+                              "height": 121.5,
                               "stroke": null,
                               "strokeWidth": 1,
                               "fill": "black",
-                              "text": "You will now be presented with the OTHER condition of the task.\n\nPlease try to answer the prompts as quickly and as accurately as possible.\n\n",
+                              "text": "\nPlease try to answer the prompts as quickly and as accurately as possible.\n\n",
                               "fontStyle": "normal",
                               "fontWeight": "normal",
                               "fontSize": "24",
@@ -13067,7 +13116,7 @@ if(this.state.otherpractice==5){
                               "left": 0,
                               "top": 275,
                               "angle": 0,
-                              "width": 141.44,
+                              "width": 158.49,
                               "height": 15.82,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -13085,7 +13134,7 @@ if(this.state.otherpractice==5){
                               "left": 0,
                               "top": -225,
                               "angle": 0,
-                              "width": 543.65,
+                              "width": 566.7,
                               "height": 56.5,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -13100,7 +13149,7 @@ if(this.state.otherpractice==5){
                             },
                             {
                               "type": "image",
-                              "left": "200",
+                              "left": 200,
                               "top": 100,
                               "angle": 0,
                               "width": 272,
@@ -13112,7 +13161,7 @@ if(this.state.otherpractice==5){
                             },
                             {
                               "type": "image",
-                              "left": "-215",
+                              "left": -215,
                               "top": 100,
                               "angle": 0,
                               "width": 272,
@@ -13649,20 +13698,16 @@ if(this.state.otherpractice==5){
                             "n": ""
                           },
                           "responses": {},
+                          "title": "other_trials",
                           "messageHandlers": {
                             "run": function anonymous(
 ) {
 //set instruction type 
 this.options.parameters.instruction = "other"
 
-//restart trial and resume CumeTrial and increment Block
-thisTrial=0 ;
-thisCumeTrial=this.state.thisCumeTrial;
-thisBlock=this.state.thisBlock+1;
-
+this.options.parameters.thisBlock=1;
 }
                           },
-                          "title": "other_trials",
                           "shuffleGroups": [],
                           "template": {
                             "type": "lab.flow.Sequence",
@@ -13722,12 +13767,12 @@ if(this.options.parameters.display == this.options.parameters.correctanswer){
   this.options.parameters.correctkeypress = "j";
 }
 
-//count trial numbers & blocks
-this.options.parameters.thisBlock=thisBlock ; //static
-thisTrial+=1;
-thisCumeTrial+=1;
-this.state.thisTrial=thisTrial ;
-this.state.thisCumeTrial=thisCumeTrial ;
+//count trial numbers
+console.log(this.options.id.split('_'));
+console.log(this.options.id.split('_').length);
+
+this.options.parameters.trial_count = parseInt(this.options.id.split('_')[this.options.id.split('_').length-1])+1 ;
+console.log(this.options.parameters.trial_count)
 
 }
                             },
@@ -13777,8 +13822,8 @@ this.state.thisCumeTrial=thisCumeTrial ;
                                 "content": [
                                   {
                                     "type": "i-text",
-                                    "left": -2,
-                                    "top": 8,
+                                    "left": 0,
+                                    "top": 7,
                                     "angle": 0,
                                     "width": 700.19,
                                     "height": 75.71,
@@ -14072,7 +14117,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
                               "left": 0,
                               "top": -175,
                               "angle": 0,
-                              "width": 417.63,
+                              "width": 446.5,
                               "height": 28.25,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -14090,12 +14135,12 @@ this.state.thisCumeTrial=thisCumeTrial ;
                               "left": 0,
                               "top": 200,
                               "angle": 0,
-                              "width": 424.91,
+                              "width": 331.41,
                               "height": 82.54,
                               "stroke": null,
                               "strokeWidth": 1,
                               "fill": "black",
-                              "text": "You should ignore what the arrow is pointing at.\n\nTotal Dots = 3 = h = CORRECT",
+                              "text": "Please ignore the arrow or person\n\nTotal Dots = 3 = h = CORRECT",
                               "fontStyle": "normal",
                               "fontWeight": "normal",
                               "fontSize": "22",
@@ -14138,7 +14183,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
                               "left": 0,
                               "top": 275,
                               "angle": 0,
-                              "width": 141.44,
+                              "width": 158.49,
                               "height": 15.82,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -14156,14 +14201,14 @@ this.state.thisCumeTrial=thisCumeTrial ;
                               "left": 0,
                               "top": -250,
                               "angle": 0,
-                              "width": 205.34,
+                              "width": 227.51,
                               "height": 36.16,
                               "stroke": null,
                               "strokeWidth": 1,
                               "fill": "black",
                               "text": "YOU Condition",
                               "fontStyle": "normal",
-                              "fontWeight": "normal",
+                              "fontWeight": "bold",
                               "fontSize": 32,
                               "fontFamily": "sans-serif",
                               "lineHeight": 1.16,
@@ -14277,7 +14322,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
                               "left": 350,
                               "top": 125,
                               "angle": 0,
-                              "width": 8.33,
+                              "width": 6.66,
                               "height": 33.9,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -14295,7 +14340,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
                               "left": 350,
                               "top": -113,
                               "angle": 0,
-                              "width": 15,
+                              "width": 16.68,
                               "height": 33.9,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -14313,7 +14358,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
                               "left": 0,
                               "top": 275,
                               "angle": 0,
-                              "width": 141.44,
+                              "width": 158.49,
                               "height": 15.82,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -14331,7 +14376,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
                               "left": 0,
                               "top": -250,
                               "angle": 0,
-                              "width": 486.68,
+                              "width": 530.83,
                               "height": 28.25,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -14371,7 +14416,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
                               "left": -50,
                               "top": -125,
                               "angle": 0,
-                              "width": 15,
+                              "width": 16.68,
                               "height": 33.9,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -14400,7 +14445,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
                               "left": -50,
                               "top": 125,
                               "angle": 0,
-                              "width": 15,
+                              "width": 16.69,
                               "height": 33.9,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -14465,12 +14510,12 @@ this.state.thisCumeTrial=thisCumeTrial ;
                               "left": -50,
                               "top": 225,
                               "angle": 0,
-                              "width": 537.61,
+                              "width": 496.65,
                               "height": 48.82,
                               "stroke": null,
                               "strokeWidth": 1,
                               "fill": "black",
-                              "text": "The correct answer is \"j\" because the number shown (1)\nDOES NOT MATCH the total number of dots on the wall (3). ",
+                              "text": "The correct answer is \"j\" because the number shown (1)\nDOES NOT MATCH the total number of dots (3). ",
                               "fontStyle": "normal",
                               "fontWeight": "normal",
                               "fontSize": "20",
@@ -14481,14 +14526,14 @@ this.state.thisCumeTrial=thisCumeTrial ;
                             {
                               "type": "i-text",
                               "left": -50,
-                              "top": -13,
+                              "top": -12,
                               "angle": 0,
-                              "width": 452.28,
+                              "width": 503.33,
                               "height": 48.82,
                               "stroke": null,
                               "strokeWidth": 1,
                               "fill": "black",
-                              "text": "The correct answer is \"h\" because the number shown (2)\nMATCHES the total number of dots on the wall (2). ",
+                              "text": "The correct answer is \"h\" because the number shown (2)\nMATCHES the total number of dots (2). ",
                               "fontStyle": "normal",
                               "fontWeight": "normal",
                               "fontSize": "20",
@@ -14526,15 +14571,15 @@ this.state.thisCumeTrial=thisCumeTrial ;
                                   "left": 0,
                                   "top": 0,
                                   "angle": 0,
-                                  "width": 826.67,
-                                  "height": 284.6,
+                                  "width": 776.08,
+                                  "height": 237.03,
                                   "stroke": null,
                                   "strokeWidth": 1,
                                   "fill": "black",
-                                  "text": "You will be shown examples for the YOU condition of the task. \n\nPlease respond with the answer you believe is correct. You will not be\nable to proceed with the task until you reach 100% accuracy on the practice.\n\nRemember:\n\nThe YOU condition is asking if the number shown matches the number \nof dots YOU can see IN TOTAL. ",
+                                  "text": "Please respond with the answer you believe is correct. You will not be\nable to proceed with the task until you reach 100% accuracy on the practice.\n\n\nRemember:\n\nThe YOU condition is asking if the number shown matches the number \nof dots YOU can see IN TOTAL. ",
                                   "fontStyle": "normal",
                                   "fontWeight": "normal",
-                                  "fontSize": "24.5",
+                                  "fontSize": "23",
                                   "fontFamily": "sans-serif",
                                   "lineHeight": 1.16,
                                   "textAlign": "center"
@@ -14562,14 +14607,14 @@ this.state.thisCumeTrial=thisCumeTrial ;
                                   "left": 0,
                                   "top": -225,
                                   "angle": 0,
-                                  "width": 337.92,
+                                  "width": 360.94,
                                   "height": 36.16,
                                   "stroke": null,
                                   "strokeWidth": 1,
                                   "fill": "black",
                                   "text": "YOU Condition Practice",
                                   "fontStyle": "normal",
-                                  "fontWeight": "normal",
+                                  "fontWeight": "bold",
                                   "fontSize": 32,
                                   "fontFamily": "sans-serif",
                                   "lineHeight": 1.16,
@@ -14664,7 +14709,7 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": 0,
                                             "angle": 0,
-                                            "width": 51.28,
+                                            "width": 51.29,
                                             "height": 101.7,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -14694,11 +14739,11 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": "-2",
-                                            "top": "8",
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
-                                            "width": 25,
-                                            "height": 56.5,
+                                            "width": 37.26,
+                                            "height": 75.71,
                                             "stroke": null,
                                             "strokeWidth": 1,
                                             "fill": "black",
@@ -14770,13 +14815,14 @@ this.options.events['keypress'] = function(e) {
                                         "messageHandlers": {},
                                         "title": "Feedback",
                                         "timeout": "2000",
+                                        "tardy": true,
                                         "content": [
                                           {
                                             "type": "i-text",
                                             "left": 0,
                                             "top": 0,
                                             "angle": 0,
-                                            "width": 235.84,
+                                            "width": 265.03,
                                             "height": 36.16,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -14789,8 +14835,7 @@ this.options.events['keypress'] = function(e) {
                                             "lineHeight": 1.16,
                                             "textAlign": "center"
                                           }
-                                        ],
-                                        "tardy": true
+                                        ]
                                       },
                                       {
                                         "type": "lab.canvas.Screen",
@@ -14852,7 +14897,7 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": 125,
                                             "angle": 0,
-                                            "width": 679.03,
+                                            "width": 625.34,
                                             "height": 188.26,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -14870,7 +14915,7 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": 275,
                                             "angle": 0,
-                                            "width": 158.49,
+                                            "width": 141.44,
                                             "height": 15.82,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -14888,7 +14933,7 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": -100,
                                             "angle": 0,
-                                            "width": 61.08,
+                                            "width": 55.62,
                                             "height": 113,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -14950,10 +14995,10 @@ this.options.events['keypress'] = function(e) {
                                           {
                                             "type": "i-text",
                                             "left": 0,
-                                            "top": "0",
+                                            "top": 0,
                                             "angle": 0,
-                                            "width": 56.98,
-                                            "height": 113,
+                                            "width": 51.28,
+                                            "height": 101.7,
                                             "stroke": null,
                                             "strokeWidth": 1,
                                             "fill": "black",
@@ -14982,8 +15027,8 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -15071,6 +15116,7 @@ this.options.events['keypress'] = function(e) {
                                         "messageHandlers": {},
                                         "title": "Feedback",
                                         "timeout": "2000",
+                                        "tardy": true,
                                         "content": [
                                           {
                                             "type": "i-text",
@@ -15090,8 +15136,7 @@ this.options.events['keypress'] = function(e) {
                                             "lineHeight": 1.16,
                                             "textAlign": "center"
                                           }
-                                        ],
-                                        "tardy": true
+                                        ]
                                       },
                                       {
                                         "type": "lab.canvas.Screen",
@@ -15166,7 +15211,7 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": 125,
                                             "angle": 0,
-                                            "width": 664,
+                                            "width": 663.57,
                                             "height": 220.37,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -15296,8 +15341,8 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -15398,6 +15443,7 @@ this.options.events['keypress'] = function(e) {
                                         "messageHandlers": {},
                                         "title": "Feedback",
                                         "timeout": "2000",
+                                        "tardy": true,
                                         "content": [
                                           {
                                             "type": "i-text",
@@ -15417,8 +15463,7 @@ this.options.events['keypress'] = function(e) {
                                             "lineHeight": 1.16,
                                             "textAlign": "center"
                                           }
-                                        ],
-                                        "tardy": true
+                                        ]
                                       },
                                       {
                                         "type": "lab.canvas.Screen",
@@ -15506,7 +15551,7 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": 125,
                                             "angle": 0,
-                                            "width": 679.03,
+                                            "width": 625.34,
                                             "height": 156.14,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -15524,7 +15569,7 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": 275,
                                             "angle": 0,
-                                            "width": 158.49,
+                                            "width": 141.44,
                                             "height": 15.82,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -15542,7 +15587,7 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": -100,
                                             "angle": 0,
-                                            "width": 61.08,
+                                            "width": 55.62,
                                             "height": 113,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -15635,8 +15680,8 @@ this.options.events['keypress'] = function(e) {
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -15750,6 +15795,7 @@ this.options.events['keypress'] = function(e) {
                                         "messageHandlers": {},
                                         "title": "Feedback",
                                         "timeout": "2000",
+                                        "tardy": true,
                                         "content": [
                                           {
                                             "type": "i-text",
@@ -15769,8 +15815,7 @@ this.options.events['keypress'] = function(e) {
                                             "lineHeight": 1.16,
                                             "textAlign": "center"
                                           }
-                                        ],
-                                        "tardy": true
+                                        ]
                                       },
                                       {
                                         "type": "lab.canvas.Screen",
@@ -15871,7 +15916,7 @@ this.options.events['keypress'] = function(e) {
                                             "left": 0,
                                             "top": 125,
                                             "angle": 0,
-                                            "width": 664,
+                                            "width": 663.57,
                                             "height": 220.37,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -15978,7 +16023,7 @@ if(this.state.youpractice==5){
                                             "left": 0,
                                             "top": 0,
                                             "angle": 0,
-                                            "width": 51.28,
+                                            "width": 52.56,
                                             "height": 101.7,
                                             "stroke": null,
                                             "strokeWidth": 1,
@@ -16008,8 +16053,8 @@ if(this.state.youpractice==5){
                                         "content": [
                                           {
                                             "type": "i-text",
-                                            "left": -2,
-                                            "top": 8,
+                                            "left": 0,
+                                            "top": 7,
                                             "angle": 0,
                                             "width": 37.26,
                                             "height": 75.71,
@@ -16136,6 +16181,7 @@ if(this.state.youpractice==5){
                                         "messageHandlers": {},
                                         "title": "Feedback",
                                         "timeout": "2000",
+                                        "tardy": true,
                                         "content": [
                                           {
                                             "type": "i-text",
@@ -16155,8 +16201,7 @@ if(this.state.youpractice==5){
                                             "lineHeight": 1.16,
                                             "textAlign": "center"
                                           }
-                                        ],
-                                        "tardy": true
+                                        ]
                                       },
                                       {
                                         "type": "lab.canvas.Screen",
@@ -16263,6 +16308,7 @@ if(this.state.youpractice==5){
                                         },
                                         "parameters": {},
                                         "messageHandlers": {},
+                                        "title": "correct_answer_5_practice_trial",
                                         "content": [
                                           {
                                             "type": "i-text",
@@ -16318,25 +16364,36 @@ if(this.state.youpractice==5){
                                             "lineHeight": 1.16,
                                             "textAlign": "center"
                                           }
-                                        ],
-                                        "title": "correct_answer_5_practice_trial"
+                                        ]
                                       }
                                     ]
                                   },
                                   {
                                     "type": "lab.canvas.Screen",
+                                    "viewport": [
+                                      800,
+                                      600
+                                    ],
+                                    "files": {},
+                                    "parameters": {},
+                                    "messageHandlers": {},
+                                    "title": "Try Again",
+                                    "tardy": true,
+                                    "responses": {
+                                      "keypress(Space)": "space"
+                                    },
                                     "content": [
                                       {
                                         "type": "i-text",
                                         "left": 0,
                                         "top": 0,
                                         "angle": 0,
-                                        "width": 702.04,
+                                        "width": 620.36,
                                         "height": 230.52,
                                         "stroke": null,
                                         "strokeWidth": 1,
                                         "fill": "black",
-                                        "text": "Unfortunately, you did not get 100% correct.\n\nIn order to continue with the task, you must get all of \nthe practice questions correct. \n\nPlease try again.",
+                                        "text": "Unfortunately, you did not get 100% correct.\n\nTo continue with the task, you must get ALL of \nthe practice questions correct. \n\nPlease try again.",
                                         "fontStyle": "normal",
                                         "fontWeight": "normal",
                                         "fontSize": "30",
@@ -16363,18 +16420,6 @@ if(this.state.youpractice==5){
                                         "textAlign": "center"
                                       }
                                     ],
-                                    "viewport": [
-                                      800,
-                                      600
-                                    ],
-                                    "files": {},
-                                    "parameters": {},
-                                    "messageHandlers": {},
-                                    "title": "Try Again",
-                                    "tardy": true,
-                                    "responses": {
-                                      "keypress(Space)": "space"
-                                    },
                                     "skip": "${this.state.youpractice==5}"
                                   }
                                 ]
@@ -16406,11 +16451,11 @@ if(this.state.youpractice==5){
                               "top": -100,
                               "angle": 0,
                               "width": 764.48,
-                              "height": 116.44,
+                              "height": 86.29,
                               "stroke": null,
                               "strokeWidth": 1,
                               "fill": "black",
-                              "text": "You will now be presented with the YOU condition of the task.\n\nPlease try to answer the prompts as quickly and as accurately as possible. \n",
+                              "text": "\nPlease try to answer the prompts as quickly and as accurately as possible. \n",
                               "fontStyle": "normal",
                               "fontWeight": "normal",
                               "fontSize": "23",
@@ -16441,7 +16486,7 @@ if(this.state.youpractice==5){
                               "left": 0,
                               "top": -225,
                               "angle": 0,
-                              "width": 500.05,
+                              "width": 500.06,
                               "height": 56.5,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -17012,10 +17057,7 @@ if(this.state.youpractice==5){
 //set instruction type 
 this.options.parameters.instruction = "you"
 
-//restart trial and resume CumeTrial and increment Block
-thisTrial=0 ;
-thisCumeTrial=this.state.thisCumeTrial;
-thisBlock=this.state.thisBlock+1;
+this.options.parameters.thisBlock=2;
 }
                           },
                           "shuffleGroups": [],
@@ -17077,14 +17119,12 @@ if(this.options.parameters.display == this.options.parameters.correctanswer){
   this.options.parameters.correctkeypress = "j";
 }
 
-//count trial numbers & blocks
-this.options.parameters.thisBlock=thisBlock ; //static
-thisTrial+=1;
-thisCumeTrial+=1;
-this.options.parameters.thisTrial=thisTrial ;
-this.options.parameters.thisCumeTrial=thisCumeTrial ;
-this.options.thisTrial=thisTrial ;
-this.options.thisCumeTrial=thisCumeTrial ;
+//count trial numbers
+console.log(this.options.id.split('_'));
+console.log(this.options.id.split('_').length);
+
+this.options.parameters.trial_count = parseInt(this.options.id.split('_')[this.options.id.split('_').length-1])+1 ;
+console.log(this.options.parameters.trial_count)
 
 }
                             },
@@ -17134,8 +17174,8 @@ this.options.thisCumeTrial=thisCumeTrial ;
                                 "content": [
                                   {
                                     "type": "i-text",
-                                    "left": -2,
-                                    "top": 8,
+                                    "left": 0,
+                                    "top": "7",
                                     "angle": 0,
                                     "width": 700.19,
                                     "height": 75.71,
@@ -17509,18 +17549,36 @@ this.options.thisCumeTrial=thisCumeTrial ;
                         },
                         {
                           "type": "lab.canvas.Screen",
+                          "viewport": [
+                            800,
+                            600
+                          ],
+                          "files": {
+                            "S1_O0_FR_purple.bmp": "embedded\u002Ff934b3664e042306fb58a7ce21e4c5f3d97d45088c62eed6cc46791e837b4ab5.bmp",
+                            "Waterfall_Pic.bmp": "embedded\u002Fd4bf7232b1f4dd8a7c7babd2eebf4b4b8de8d3af80db2fab0492252dba5ccdd1.bmp",
+                            "S1_O1_MR_orange.bmp": "embedded\u002F5b2b45a25228d0b6dd5254ef977fd798226f7396098744d3b55b9a1c030028e9.bmp",
+                            "S2_O2_MR_orange.bmp": "embedded\u002F11ae6adb163bf3846d889ddc1c334d0e2abae6f51fc588f855698e45e3b00232.bmp",
+                            "Threat_Pic.bmp": "embedded\u002Fe328a50aac5c9acf52e9c072738bbd33e6f6c8a524ae56cc233572dc4d46966f.bmp"
+                          },
+                          "responses": {
+                            "keypress(Space)": "space"
+                          },
+                          "parameters": {},
+                          "messageHandlers": {},
+                          "title": "instr_color",
+                          "timeout": "180000",
                           "content": [
                             {
                               "type": "i-text",
                               "left": 0,
                               "top": -225,
                               "angle": 0,
-                              "width": 736.49,
-                              "height": 121.5,
+                              "width": 611.07,
+                              "height": 116.44,
                               "stroke": null,
                               "strokeWidth": 1,
                               "fill": "black",
-                              "text": "The numbers shown and the dots in the room will be either purple or orange.\n\nThe colors will tell you if a waterfall or nails on a chalkboard \nvideo is likely to play.",
+                              "text": "The numbers and dots will now be either purple or orange.\n\nThe colors will tell you if a waterfall or nails on a chalkboard \nvideo is likely to play.",
                               "fontStyle": "normal",
                               "fontWeight": "normal",
                               "fontSize": "23",
@@ -17533,7 +17591,7 @@ this.options.thisCumeTrial=thisCumeTrial ;
                               "left": -225,
                               "top": -100,
                               "angle": 0,
-                              "width": 218.08,
+                              "width": 242.12,
                               "height": 82.54,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -17551,7 +17609,7 @@ this.options.thisCumeTrial=thisCumeTrial ;
                               "left": 200,
                               "top": -100,
                               "angle": 0,
-                              "width": 265.57,
+                              "width": 283.32,
                               "height": 82.54,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -17593,7 +17651,7 @@ this.options.thisCumeTrial=thisCumeTrial ;
                               "left": -225,
                               "top": -25,
                               "angle": 0,
-                              "width": 16,
+                              "width": 17.8,
                               "height": 36.16,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -17611,7 +17669,7 @@ this.options.thisCumeTrial=thisCumeTrial ;
                               "left": 200,
                               "top": -25,
                               "angle": 0,
-                              "width": 16,
+                              "width": 17.8,
                               "height": 36.16,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -17653,7 +17711,7 @@ this.options.thisCumeTrial=thisCumeTrial ;
                               "left": 0,
                               "top": 275,
                               "angle": 0,
-                              "width": 141.44,
+                              "width": 158.49,
                               "height": 15.82,
                               "stroke": null,
                               "strokeWidth": 1,
@@ -17666,25 +17724,7 @@ this.options.thisCumeTrial=thisCumeTrial ;
                               "lineHeight": 1.16,
                               "textAlign": "center"
                             }
-                          ],
-                          "viewport": [
-                            800,
-                            600
-                          ],
-                          "files": {
-                            "S1_O0_FR_purple.bmp": "embedded\u002Ff934b3664e042306fb58a7ce21e4c5f3d97d45088c62eed6cc46791e837b4ab5.bmp",
-                            "Waterfall_Pic.bmp": "embedded\u002Fd4bf7232b1f4dd8a7c7babd2eebf4b4b8de8d3af80db2fab0492252dba5ccdd1.bmp",
-                            "S1_O1_MR_orange.bmp": "embedded\u002F5b2b45a25228d0b6dd5254ef977fd798226f7396098744d3b55b9a1c030028e9.bmp",
-                            "S2_O2_MR_orange.bmp": "embedded\u002F11ae6adb163bf3846d889ddc1c334d0e2abae6f51fc588f855698e45e3b00232.bmp",
-                            "Threat_Pic.bmp": "embedded\u002Fe328a50aac5c9acf52e9c072738bbd33e6f6c8a524ae56cc233572dc4d46966f.bmp"
-                          },
-                          "responses": {
-                            "keypress(Space)": "space"
-                          },
-                          "parameters": {},
-                          "messageHandlers": {},
-                          "title": "instr_color",
-                          "timeout": "180000"
+                          ]
                         }
                       ]
                     }
@@ -17713,7 +17753,7 @@ this.options.thisCumeTrial=thisCumeTrial ;
                       "left": 0,
                       "top": -75,
                       "angle": 0,
-                      "width": 774.48,
+                      "width": 774.45,
                       "height": 176.73,
                       "stroke": null,
                       "strokeWidth": 1,
@@ -17731,7 +17771,7 @@ this.options.thisCumeTrial=thisCumeTrial ;
                       "left": 0,
                       "top": 275,
                       "angle": 0,
-                      "width": 158.5,
+                      "width": 158.49,
                       "height": 15.82,
                       "stroke": null,
                       "strokeWidth": 1,
@@ -17749,7 +17789,7 @@ this.options.thisCumeTrial=thisCumeTrial ;
                       "left": 0,
                       "top": -225,
                       "angle": 0,
-                      "width": 566.69,
+                      "width": 566.7,
                       "height": 56.5,
                       "stroke": null,
                       "strokeWidth": 1,
@@ -17772,8 +17812,7 @@ this.options.thisCumeTrial=thisCumeTrial ;
                       "stroke": null,
                       "strokeWidth": 0,
                       "fill": "black",
-                      "src": "${ this.files[\"other_S1_A0_FL_black.bmp\"] }",
-                      "autoScale": undefined
+                      "src": "${ this.files[\"other_S1_A0_FL_black.bmp\"] }"
                     },
                     {
                       "type": "image",
@@ -17785,8 +17824,7 @@ this.options.thisCumeTrial=thisCumeTrial ;
                       "stroke": null,
                       "strokeWidth": 0,
                       "fill": "black",
-                      "src": "${ this.files[\"other_S3_O2_FR_black.bmp\"] }",
-                      "autoScale": undefined
+                      "src": "${ this.files[\"other_S3_O2_FR_black.bmp\"] }"
                     }
                   ]
                 },
@@ -18322,6 +18360,8 @@ this.options.thisCumeTrial=thisCumeTrial ;
 //set instruction type 
 this.options.parameters.instruction = "other"
 
+this.options.parameters.thisBlock=3;
+
 //this.parameters.videoArray = new Array(3,4,5);
 this.parameters.videoArray = new Array(1,2,3); //for debugging
 //this.state.thisInterval = this.random.choice(this.parameters.videoArray) + 1 ;
@@ -18352,10 +18392,6 @@ console.log(thisInterval)
 thisColor='';
 thisVideo='';
 
-//restart trial and resume CumeTrial and increment Block
-thisTrial=0 ;
-thisCumeTrial=this.state.thisCumeTrial;
-thisBlock=this.state.thisBlock+1;
 }
                   },
                   "shuffleGroups": [],
@@ -18475,14 +18511,12 @@ this.parameters.vidIntervals = thisInterval ;
 console.log("parameters.vidIntervals is now")
 console.log(this.parameters.vidIntervals)
 
-//count trial numbers & blocks
-this.options.parameters.thisBlock=thisBlock ; //static
-thisTrial+=1;
-thisCumeTrial+=1;
-this.options.parameters.thisTrial=thisTrial ;
-this.options.parameters.thisCumeTrial=thisCumeTrial ;
-this.state.thisTrial=thisTrial ;
-this.state.thisCumeTrial=thisCumeTrial ;
+//count trial numbers
+console.log(this.options.id.split('_'));
+console.log(this.options.id.split('_').length);
+
+this.options.parameters.trial_count = parseInt(this.options.id.split('_')[this.options.id.split('_').length-1])+1 ;
+console.log(this.options.parameters.trial_count)
 
 }
                     },
@@ -18532,8 +18566,8 @@ this.state.thisCumeTrial=thisCumeTrial ;
                         "content": [
                           {
                             "type": "i-text",
-                            "left": -2,
-                            "top": 8,
+                            "left": 0,
+                            "top": 7,
                             "angle": 0,
                             "width": 700.19,
                             "height": 75.71,
@@ -18813,7 +18847,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
 }
                         },
                         "title": "Nails 2",
-                        "content": "\u003Chead\u003E\r\n  \u003Clink rel=\"preload\" as=\"video\" onload=\"this.rel = 'stylesheet'\" href=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FWaterfall1.mp4\" media:{width=\"80%\"}\u003E\r\n\u003C\u002Fhead\u003E\r\n\r\n\u003Cmain class=\"content-horizontal-center content-vertical-center\"\u003E\r\n  \u003Cvideo loop=\"true\" autoplay=\"autoplay\" preload=\"auto\" width=\"80%\"\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FNailsOnChalkboard_Clip2.mp4\" type=\"video\u002Fmp4\"\u003E\r\n  \u003C\u002Fvideo\u003E\r\n\u003C\u002Fmain\u003E",
+                        "content": "\u003Chead\u003E\r\n  \u003Clink rel=\"preload\" as=\"video\" onload=\"this.rel = 'stylesheet'\" href=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FNailsOnChalkboard_Clip2.mp4\" media:{width=\"80%\"}\u003E\r\n\u003C\u002Fhead\u003E\r\n\r\n\u003Cmain class=\"content-horizontal-center content-vertical-center\"\u003E\r\n  \u003Cvideo loop=\"true\" autoplay=\"autoplay\" preload=\"auto\" width=\"80%\"\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FNailsOnChalkboard_Clip2.mp4\" type=\"video\u002Fmp4\"\u003E\r\n  \u003C\u002Fvideo\u003E\r\n\u003C\u002Fmain\u003E",
                         "timeout": "3000",
                         "skip": "${this.parameters.myvideo != 'N2' || this.parameters.vidIntervals != 0}"
                       },
@@ -18965,7 +18999,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
                       "left": 0,
                       "top": -75,
                       "angle": 0,
-                      "width": 764.51,
+                      "width": 764.48,
                       "height": 176.73,
                       "stroke": null,
                       "strokeWidth": 1,
@@ -19001,7 +19035,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
                       "left": 0,
                       "top": -225,
                       "angle": 0,
-                      "width": 500.03,
+                      "width": 500.06,
                       "height": 56.5,
                       "stroke": null,
                       "strokeWidth": 1,
@@ -19024,8 +19058,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
                       "stroke": null,
                       "strokeWidth": 0,
                       "fill": "black",
-                      "src": "${ this.files[\"self_S1_A0_FL_black 2_recolored.bmp\"] }",
-                      "autoScale": undefined
+                      "src": "${ this.files[\"self_S1_A0_FL_black 2_recolored.bmp\"] }"
                     },
                     {
                       "type": "image",
@@ -19037,8 +19070,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
                       "stroke": null,
                       "strokeWidth": 0,
                       "fill": "black",
-                      "src": "${ this.files[\"self_S3_O2_FR_black 2_recolored.bmp\"] }",
-                      "autoScale": undefined
+                      "src": "${ this.files[\"self_S3_O2_FR_black 2_recolored.bmp\"] }"
                     }
                   ]
                 },
@@ -19574,6 +19606,8 @@ this.state.thisCumeTrial=thisCumeTrial ;
 //set instruction type 
 this.options.parameters.instruction = "you"
 
+this.options.parameters.thisBlock=4;
+
 //this.parameters.videoArray = new Array(3,4,5);
 this.parameters.videoArray = new Array(1,2,3); //for debugging
 //this.state.thisInterval = this.random.choice(this.parameters.videoArray) + 1 ;
@@ -19604,10 +19638,7 @@ console.log(thisInterval)
 thisColor='';
 thisVideo='';
 
-//restart trial and resume CumeTrial and increment Block
-thisTrial=0 ;
-thisCumeTrial=this.state.thisCumeTrial;
-thisBlock=this.state.thisBlock+1;
+
 }
                   },
                   "shuffleGroups": [],
@@ -19727,14 +19758,12 @@ this.parameters.vidIntervals = thisInterval ;
 console.log("parameters.vidIntervals is now")
 console.log(this.parameters.vidIntervals)
 
-//count trial numbers & blocks
-this.options.parameters.thisBlock=thisBlock ; //static
-thisTrial+=1;
-thisCumeTrial+=1;
-this.options.parameters.thisTrial=thisTrial ;
-this.options.parameters.thisCumeTrial=thisCumeTrial ;
-this.state.thisTrial=thisTrial ;
-this.state.thisCumeTrial=thisCumeTrial ;
+//count trial numbers
+console.log(this.options.id.split('_'));
+console.log(this.options.id.split('_').length);
+
+this.options.parameters.trial_count = parseInt(this.options.id.split('_')[this.options.id.split('_').length-1])+1 ;
+console.log(this.options.parameters.trial_count)
 
 }
                     },
@@ -19784,8 +19813,8 @@ this.state.thisCumeTrial=thisCumeTrial ;
                         "content": [
                           {
                             "type": "i-text",
-                            "left": -2,
-                            "top": 8,
+                            "left": 0,
+                            "top": 7,
                             "angle": 0,
                             "width": 700.19,
                             "height": 75.71,
@@ -20065,7 +20094,7 @@ this.state.thisCumeTrial=thisCumeTrial ;
 }
                         },
                         "title": "Nails 2",
-                        "content": "\u003Chead\u003E\r\n  \u003Clink rel=\"preload\" as=\"video\" onload=\"this.rel = 'stylesheet'\" href=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FWaterfall1.mp4\" media:{width=\"80%\"}\u003E\r\n\u003C\u002Fhead\u003E\r\n\r\n\u003Cmain class=\"content-horizontal-center content-vertical-center\"\u003E\r\n  \u003Cvideo loop=\"true\" autoplay=\"autoplay\" preload=\"auto\" width=\"80%\"\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FNailsOnChalkboard_Clip2.mp4\" type=\"video\u002Fmp4\"\u003E\r\n  \u003C\u002Fvideo\u003E\r\n\u003C\u002Fmain\u003E",
+                        "content": "\u003Chead\u003E\r\n  \u003Clink rel=\"preload\" as=\"video\" onload=\"this.rel = 'stylesheet'\" href=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FNailsOnChalkboard_Clip2.mp4\" media:{width=\"80%\"}\u003E\r\n\u003C\u002Fhead\u003E\r\n\r\n\u003Cmain class=\"content-horizontal-center content-vertical-center\"\u003E\r\n  \u003Cvideo loop=\"true\" autoplay=\"autoplay\" preload=\"auto\" width=\"80%\"\u003E\r\n    \u003Csource src=\"https:\u002F\u002Fnacewiczneurochem.github.io\u002FMovies\u002FNailsOnChalkboard_Clip2.mp4\" type=\"video\u002Fmp4\"\u003E\r\n  \u003C\u002Fvideo\u003E\r\n\u003C\u002Fmain\u003E",
                         "timeout": "3000",
                         "skip": "${this.parameters.myvideo != 'N2' || this.parameters.vidIntervals != 0}"
                       },
